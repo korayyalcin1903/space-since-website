@@ -1,0 +1,109 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Lato&family=Varela+Round&display=swap'); */
+
+@font-face {
+	font-family: 'audiowide-regular-webfont';
+	src: url('../fonts/audiowide-regular-webfont.eot');
+	src: url('../fonts/audiowide-regular-webfont.woff') format('woff'), 
+    url('../fonts/audiowide-regular-webfont.ttf') format('truetype'), url('../fonts/audiowide-regular-webfont.svg') format('svg');
+}
+body{
+    font-family: 'audiowide-regular-webfont' !important ;
+    background: url("../images/bg-home.jpg");
+    background-attachment: fixed;
+}
+
+
+.navbar{
+    position:fixed !important;
+    width: 100% !important;
+    z-index: 5;
+}
+
+
+.transparent{
+    background-image: url("../images/bg-transparent1.png");
+}
+
+.satellite{
+    position: absolute;
+    top:0;
+    left: 15%;
+    width: 25%;
+    animation: turksat-animation 1s forwards ease-in;
+}
+
+.home-text{
+    position: relative;
+    padding-top:10%;
+    padding-left:20%;
+    margin-bottom: 3%;
+}
+
+.home-text h1{
+    font-size: 4rem !important;
+}
+
+.scrolling{
+    position: relative;
+    left:-100%;
+    animation: scroll-text 1s forwards ease-in;
+}
+
+.about{
+    background: url("../images/bg-about.jpg");
+}
+
+.up-icon{
+    position: fixed;
+    background-color: #dc3545;
+    border-radius: 50%;
+    right: 20px;
+    bottom: 20px;
+}
+
+
+@keyframes turksat-animation{
+    to{
+        top:15%;
+    }
+}
+
+@keyframes scroll-text{
+    to{
+        left: 0%;
+    }
+}
+
+@media (max-width:768px){
+    .logo{
+        width: 50%;
+    }
+
+    .logo img{
+        width: 100%;
+    }
+
+    .satellite{
+        width: 50%;
+        top:10%;
+        left:0;
+    }
+
+    .home-text{
+        padding: 0;
+    }
+
+    .about{
+        background-position: center;
+        background-size: 300% 100%;
+    }
+    #home{
+        padding-top: 20%;
+    }
+}
+
+@media (max-width:576px){
+    .latest-header-title{
+        border-top:1px solid #fff;
+    }
+}
